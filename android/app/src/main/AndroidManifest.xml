@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.ktorfluttyblog_client">
+    package="com.soethan.ktorfluttyblog_client">
    <application
         android:label="ktorfluttyblog_client"
         android:name="${applicationName}"

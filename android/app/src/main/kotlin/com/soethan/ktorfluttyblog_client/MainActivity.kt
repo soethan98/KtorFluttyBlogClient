@@ -1,4 +1,4 @@
-package com.example.ktorfluttyblog_client
+package com.soethan.ktorfluttyblog_client
 
 import io.flutter.embedding.android.FlutterActivity
 
