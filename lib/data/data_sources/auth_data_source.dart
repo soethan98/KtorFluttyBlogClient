@@ -16,6 +16,5 @@ class AuthDataSourceImpl extends AuthDataSource {
   Future<void> loginWithGoogle() async {
     final result = await googleSignIn.signIn();
     final auth = await result?.authentication;
-    print('${auth?.idToken}');
   }
 }

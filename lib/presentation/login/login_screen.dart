@@ -2,13 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:ktorfluttyblog_client/presentation/login/login_controller.dart';
-import 'package:ktorfluttyblog_client/widgets/google_sign_in_button.dart';
+import 'package:ktorfluttyblog_client/widgets/animate_button.dart';
+import 'package:ktorfluttyblog_client/widgets/async_value_ui.dart';
 
 class LoginScreen extends ConsumerWidget {
   const LoginScreen({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    ref.listen<AsyncValue>(loginControllerProvider,
+        (_, state) => state.showAlertDialogOnError(context));
     final state = ref.watch(loginControllerProvider);
     return Scaffold(
       appBar: AppBar(),
@@ -42,7 +45,7 @@ class LoginScreen extends ConsumerWidget {
             const SizedBox(
               height: 20,
             ),
-            GoogleSignInButton(
+            AnimateButton(
               isLoading: state.isLoading,
               onPressed: () async {
                 ref.read(loginControllerProvider.notifier).loginWithGoogle();
