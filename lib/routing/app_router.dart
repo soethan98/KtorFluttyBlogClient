@@ -1,5 +1,5 @@
 import 'package:go_router/go_router.dart';
-import 'package:ktorfluttyblog_client/login_screen.dart';
+import 'package:ktorfluttyblog_client/presentation/login/login_screen.dart';
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
